@@ -7,7 +7,7 @@ import org.jsoup.nodes.Element
 /**
  * @author Zero on 1/18/2018.
  */
-class LoadSite(private val url:String) {
+class LoadSite(private val url:String){
 
     fun getBody(): Element {
         return GetWebsiteTask().execute(url).get()

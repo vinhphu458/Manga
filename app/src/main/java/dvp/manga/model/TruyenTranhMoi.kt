@@ -2,16 +2,15 @@ package dvp.manga.model
 
 import android.util.Log
 import dvp.manga.LoadSite
-import org.jsoup.select.Elements
 
 /**
  * @author Zero on 1/21/2018.
  */
-class TruyenTranhMoi() {
+class TruyenTranhMoi : BaseManga() {
 
     private var baseUrl = "http://2.truyentranhmoi.com/"
 
-    fun getMangas(page: Int?): List<Manga> {
+    override fun getMangas(page: Int?): List<Manga> {
         val mangas: MutableList<Manga> = mutableListOf()
         val body = LoadSite(baseUrl + "moi-cap-nhat/page/" + page).getBody()
         val list = body.select("div.box.chap-list.truyen-list  > ul").select("li")
@@ -21,12 +20,13 @@ class TruyenTranhMoi() {
             val href = a[1].attr("href")
             val title = a[1].text()
             val lastChap = a[2].text()
-            mangas.add(Manga(title, coverUrl, href, lastChap))
+            Log.d("TEST", Manga(title, coverUrl, href, lastChap).toString())
+//            mangas.add(Manga(title, coverUrl, href, lastChap))
         }
         return mangas
     }
 
-    fun getChaps(mangaHref: String): List<Chapter> {
+    override fun getChaps(mangaHref: String): List<Chapter> {
         val chaps: MutableList<Chapter> = mutableListOf()
         val body = LoadSite(mangaHref).getBody()
         val list = body.select("div.box.chap-list  > ul").select("li")
@@ -39,7 +39,7 @@ class TruyenTranhMoi() {
         return chaps
     }
 
-    fun getPage(chapHref: String): List<Page> {
+    override fun getPages(chapHref: String): List<Page> {
         val pages: MutableList<Page> = mutableListOf()
         val body = LoadSite(chapHref).getBody()
         val list = body.select("div.image-chap").select("img")
@@ -51,7 +51,7 @@ class TruyenTranhMoi() {
         return pages
     }
 
-    fun getSearchedMangas(query: String, page: Int): List<Manga> {
+    override fun getSearchedMangas(query: String, page: Int): List<Manga> {
         val url = baseUrl + "page/" + page + "/?s=" + query
         val mangas: MutableList<Manga> = mutableListOf()
         val body = LoadSite(url).getBody()
@@ -61,14 +61,9 @@ class TruyenTranhMoi() {
             val coverUrl = a[0].select("img").attr("src")
             val href = a[1].attr("href")
             val title = a[1].text()
-            Log.d("TEST", Manga(title, coverUrl, href, "").toString());
-//            mangas.add(Manga(title, coverUrl, href, lastChap))
+            mangas.add(Manga(title, coverUrl, href, ""))
         }
         return mangas
-    }
-
-    private fun <T> parse(list: Elements, out: Class<T>) {
-
     }
 
 }

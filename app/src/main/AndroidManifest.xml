@@ -3,6 +3,7 @@
     package="dvp.manga">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name=".InitApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

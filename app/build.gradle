@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'realm-android'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -26,6 +28,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     productFlavors {
+    }
+    realm {
+        syncEnabled = true;
     }
 }
 
