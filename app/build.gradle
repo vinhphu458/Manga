@@ -29,9 +29,9 @@ android {
     }
     productFlavors {
     }
-    realm {
-        syncEnabled = true;
-    }
+//    realm {
+//        syncEnabled = true;
+//    }
 }
 
 dependencies {
@@ -44,5 +44,9 @@ dependencies {
 //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     compile 'org.jsoup:jsoup:1.11.2'
+    compile "com.github.vicpinm:krealmextensions:2.1.0"
 
+//For Single and Flowable queries:
+    compile 'io.reactivex.rxjava2:rxjava:2.1.8'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }

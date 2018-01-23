@@ -1,12 +1,12 @@
 package dvp.manga.model
 
-import android.util.Log
+import com.vicpin.krealmextensions.save
 import dvp.manga.LoadSite
 
 /**
  * @author Zero on 1/21/2018.
  */
-class TruyenTranhMoi : BaseManga() {
+class TruyenTranhMoi() : BaseManga() {
 
     private var baseUrl = "http://2.truyentranhmoi.com/"
 
@@ -20,7 +20,16 @@ class TruyenTranhMoi : BaseManga() {
             val href = a[1].attr("href")
             val title = a[1].text()
             val lastChap = a[2].text()
-            Log.d("TEST", Manga(title, coverUrl, href, lastChap).toString())
+            Manga(title, coverUrl, href, lastChap).save()
+
+//            realm.executeTransaction {
+//                val manga = realm.createObject<Manga>()
+//                manga.title = a[1].text()
+//                manga.cover_url = a[0].select("img").attr("src")
+//                manga.href = a[1].attr("href")
+//                manga.last_chap = a[2].text()
+//            }
+//            Log.d("TEST", Manga(title, coverUrl, href, lastChap).toString())
 //            mangas.add(Manga(title, coverUrl, href, lastChap))
         }
         return mangas
@@ -34,7 +43,7 @@ class TruyenTranhMoi : BaseManga() {
             val a = item.select("a")
             val href = a.attr("href")
             val title = a.text()
-            chaps.add(Chapter(title, href))
+//            chaps.add(Chapter(title, href))
         }
         return chaps
     }
@@ -46,7 +55,7 @@ class TruyenTranhMoi : BaseManga() {
         for (item in list) {
             val title = item.attr("title")
             val src = item.attr("src")
-            pages.add(Page(title, src))
+//            pages.add(Page(title, src))
         }
         return pages
     }
@@ -61,7 +70,7 @@ class TruyenTranhMoi : BaseManga() {
             val coverUrl = a[0].select("img").attr("src")
             val href = a[1].attr("href")
             val title = a[1].text()
-            mangas.add(Manga(title, coverUrl, href, ""))
+//            mangas.add(Manga(title, coverUrl, href, ""))
         }
         return mangas
     }

@@ -1,12 +1,13 @@
 package dvp.manga.model
 
-import io.realm.RealmObject
-import io.realm.annotations.PrimaryKey
+import io.realm.RealmModel
+import io.realm.annotations.RealmClass
 
 /**
  * @author Zero on 1/21/2018.
  */
-data class Chapter(@PrimaryKey val id: Int, private val title: String, private val href: String) : RealmObject(){
+@RealmClass
+open class Chapter(open var title: String? = null, open var href: String? = null) : RealmModel {
     override fun toString(): String {
         return String.format("title: %s, href: %s}", title, href)
     }
