@@ -1,7 +1,7 @@
 package dvp.manga.model
 
-import com.vicpin.krealmextensions.save
 import dvp.manga.LoadSite
+import dvp.manga.extensions.save
 
 /**
  * @author Zero on 1/21/2018.

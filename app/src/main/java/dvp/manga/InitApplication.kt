@@ -2,7 +2,6 @@ package dvp.manga
 
 import android.app.Application
 import android.os.Environment
-import com.vicpin.krealmextensions.RealmConfigStore
 import dvp.manga.model.MangaModule
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -20,12 +19,14 @@ class InitApplication : Application() {
         Realm.init(this)
         val sdCard = Environment.getExternalStorageDirectory()
         val directory = File(sdCard.getAbsolutePath())
-
-        val config = RealmConfiguration.Builder().directory(directory)
+        val config = RealmConfiguration.Builder()
+                .directory(directory)
                 .name("manga.realm")
-                .schemaVersion(0)
+                .schemaVersion(1)
+                .modules(MangaModule())
                 .deleteRealmIfMigrationNeeded()
                 .build()
-        RealmConfigStore.initModule(MangaModule::class.java, config)
+        Realm.setDefaultConfiguration(config)
+
     }
 }
