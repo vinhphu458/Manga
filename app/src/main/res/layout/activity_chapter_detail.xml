@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dvp.manga.views.custom.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:transitionName="chapter"
+    tools:context="dvp.manga.views.screens.ChapterDetailActivity">
+
+    <FrameLayout
+        android:id="@+id/progressHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_light">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_light"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_trans_50"
+        android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/tvChapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/btRotate"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="chapter"
+            android:textColor="@color/text_primary_light"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btRotate"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_phone" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/toolbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom"
+        android:background="@color/dark_trans_50">
+
+        <ImageButton
+            android:id="@+id/btPreChap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageButton
+            android:id="@+id/btNextChap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageButton
+            android:id="@+id/btBrightness"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_light" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:indeterminateTint="@color/colorAccent"
+            android:visibility="visible" />
+    </FrameLayout>
+</dvp.manga.views.custom.SwipeLayout>

@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#7b4bff</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="grey_02">#bfbfbf</color>
+
+
+    <!-- app palette -->
+    <color name="primary">#69F0AE</color>
+    <color name="accent">@color/primary</color> <!-- mono-color -->
+
+    <!-- common colours -->
+    <!-- 87% -->
+    <!-- 54% -->
+    <!-- 38% -->
+    <color name="text_primary_light">#ffffffff</color>
+    <!-- 70% -->
+    <!-- 30% -->
+    <color name="background_light">#fafafa</color> <!-- grey 50 -->
+    <!-- grey 300 -->
+    <color name="background_dark">#ff333333</color>
+    <color name="immersive_bars">#99000000</color>
+    <!-- 70% grey 200 -->
+    <!-- overridden on v23+ -->
+    <!-- overridden on v26+ -->
+    <!-- this is blended with immersive_bars to produce the desired status bar color i.e. background_super_dark -->
+    <color name="background_super_dark">#ff292929</color>
+    <color name="mid_grey">#40808080</color>
+    <color name="grey_300">#ffe0e0e0</color>
+    <color name="dark_trans_50">#99000000</color> <!-- 60% black-->
+    <!-- 30% black-->
+    <!-- 60% black on @color/primary -->
+    <!-- grey 600 -->
+    <!-- 12% black -->
+
+    <!-- text (most text uses material theme colours) -->
+    <color name="hint_disabled_dark">#43000000</color> <!-- 26% black -->
+
+    <!-- designer news -->
+    <!--light blue 500 --><![CDATA[-->
+    ]]><!-- light blue 600 -->
+
+
+    <!-- dribbble -->
+    <!-- pink 300 -->
+    <!-- pink 400 -->
+    <!-- 87% white-->
+
+
+    <!-- product hunt-->
+
+    <!-- search -->
+
 </resources>

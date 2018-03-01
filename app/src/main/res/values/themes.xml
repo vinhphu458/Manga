@@ -1,0 +1,52 @@
+<resources>
+
+    <style name="Manga" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:navigationBarColor">@color/background_super_dark</item>
+        <item name="android:statusBarColor">@color/background_super_dark</item>
+        <item name="android:textColorHint">@color/hint_disabled_dark</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:colorEdgeEffect">@color/mid_grey</item>
+    </style>
+
+    <style name="Manga.Home">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/immersive_bars</item>
+        <item name="android:navigationBarColor">@color/immersive_bars</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+    </style>
+
+    <style name="Manga.Chapter.ChapterDetail">
+        <item name="android:windowFullscreen">true</item>
+        <!--<item name="android:background">@color/background_dark</item>-->
+    </style>
+
+    <style name="Manga.Chapter">
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/dribbble_player_shared_enter</item>
+        <item name="android:windowEnterTransition">@transition/dribbble_player_enter</item>
+        <item name="android:windowReturnTransition">@transition/dribbble_player_return</item>
+        <item name="android:windowTransitionBackgroundFadeDuration">200</item>
+    </style>
+
+    <style name="MangaToolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">@null</item>
+        <item name="android:elevation">5dp</item>
+        <!--<item name="android:theme">@android:style/ThemeOverlay.Material.Dark.ActionBar</item>-->
+        <item name="android:theme">@android:style/ThemeOverlay.Material.Dark.ActionBar</item>
+        <item name="android:titleTextAppearance">@style/TextAppearance.ToolbarTitleSmallCaps</item>
+    </style>
+
+    <style name="TextAppearance.ToolbarTitleSmallCaps" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_primary_light</item>
+        <item name="android:fontFeatureSettings">smcp</item>
+        <item name="android:letterSpacing">0.2</item>
+    </style>
+
+</resources>

@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <!-- standard metrics -->
+    <dimen name="padding_normal">16dp</dimen>
+    <!-- padding_normal + fab_size + padding_normal -->
+    <!-- fab_size + padding_normal -->
+    <!-- (fab_size / 2) + padding_normal -->
+    <!-- 2 * ?android:actionBarSize -->
+    <!-- text input layout seems to add 4dp of extra padding. The following account for this -->
+
+
+    <!-- dialogs -->
+
+    <!-- drawer -->
+
+    <!-- grid -->
+    <!-- 24dp icon + 2 * @dimen/spacing_normal -->
+
+    <!-- designer news story -->
+
+    <!-- dribbble shot -->
+    <!-- 3 * ?android:actionBarSize -->
+    <!-- avatar should be a 40dp asset in a 48dp touch target & optically aligned with standard padding -->
+    <!-- (avatar_bounds - avatar_size) / 2 -->
+    <!-- padding_normal - avatar_padding -->
+    <!-- avatar_size / 2 -->
+
+    <!-- dribbble player -->
+    <!-- 2 * actionBarSize - 2 * avatar_padding -->
+    <!-- large_avatar_margin + large_avatar_size + avatar_margin -->
+
+    <!-- bottom sheet -->
+
+    <!-- about screen -->
+
+    <!-- Z-axis elevations -->
+    <dimen name="touch_raise">6dp</dimen>
+
+    <!-- per https://developer.android.com/reference/android/view/ViewGroup.LayoutParams.html#MATCH_PARENT -->
+
+
+</resources>
