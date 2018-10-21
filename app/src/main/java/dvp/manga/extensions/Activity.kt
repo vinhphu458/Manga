@@ -31,21 +31,21 @@ fun <T : View> T.colorInt(@ColorRes id: Int): Int {
     return ContextCompat.getColor(context, id)
 }
 
-fun Activity.sharedElements(vararg views: View): ActivityOptions {
-    val listPair = arrayOfNulls<Pair<View, String>>(views.size)
-    for (i in views.indices) {
-        listPair.set(i, Pair(views[i], ViewCompat.getTransitionName(views[i])))
-    }
-    return ActivityOptions.makeSceneTransitionAnimation(this, *listPair)
-}
-
-fun Fragment.sharedElements(vararg views: View): ActivityOptions {
-    val listPair = arrayOfNulls<Pair<View, String>>(views.size)
-    for (i in views.indices) {
-        listPair.set(i, Pair(views[i], ViewCompat.getTransitionName(views[i])))
-    }
-    return ActivityOptions.makeSceneTransitionAnimation(this.activity, *listPair)
-}
+//fun Activity.sharedElements(vararg views: View): ActivityOptions {
+//    val listPair = arrayOfNulls<Pair<View, String>>(views.size)
+//    for (i in views.indices) {
+//        listPair.set(i, Pair(views[i], ViewCompat.getTransitionName(views[i])))
+//    }
+//    return ActivityOptions.makeSceneTransitionAnimation(this, *listPair)
+//}
+//
+//fun Fragment.sharedElements(vararg views: View): ActivityOptions {
+//    val listPair = arrayOfNulls<Pair<View, String>>(views.size)
+//    for (i in views.indices) {
+//        listPair.set(i, Pair(views[i], ViewCompat.getTransitionName(views[i])))
+//    }
+//    return ActivityOptions.makeSceneTransitionAnimation(this.activity, *listPair)
+//}
 
 fun px2dp(px: Float): Int {
     return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, px, DisplayMetrics()).toInt()

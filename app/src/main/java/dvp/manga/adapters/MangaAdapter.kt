@@ -42,7 +42,7 @@ class MangaAdapter(val context: Context?, recyclerView: RecyclerView, private va
         return MangaViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
         if (holder is MangaViewHolder) {
             holder.bindData(arrayList[position])

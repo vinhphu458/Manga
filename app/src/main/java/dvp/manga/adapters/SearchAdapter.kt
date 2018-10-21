@@ -25,8 +25,8 @@ class SearchAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.Vi
     var list = mutableListOf<Manga>()
     var isHistory = true
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
-        val itemView = LayoutInflater.from(parent?.context).inflate(R.layout.item_filtered, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_filtered, parent, false)
         return ItemHolder(itemView)
     }
 
@@ -34,7 +34,7 @@ class SearchAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.Vi
         return list.size
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         holder as ItemHolder
         holder.bindData(list[position])
     }

@@ -20,7 +20,7 @@ class AnimRecyclerView : RecyclerView {
 
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    override fun setLayoutManager(layout: RecyclerView.LayoutManager) {
+    override fun setLayoutManager(layout: RecyclerView.LayoutManager?) {
         if (layout is GridLayoutManager) {
             super.setLayoutManager(layout)
         } else {

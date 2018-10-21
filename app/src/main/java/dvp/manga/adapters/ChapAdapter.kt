@@ -32,7 +32,7 @@ class ChapAdapter(val context: Context?, recyclerView: RecyclerView) : EndlessSc
         (context as MangaDetailActivity).getChaps()
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
         if (holder is ChapHolder) {
             holder.bindData(arrayList[position])
